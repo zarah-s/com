@@ -2,6 +2,7 @@ import { useState } from "react";
 import Category from "./components/Category";
 import Tab from "./components/Tab";
 import HomePageController from "../controller/HomePageController";
+import Product from "./components/Product";
 
 const HomePage = () => {
   const [currentSubCategory, setCurrentSubCategory] = useState<number>(0);
@@ -73,6 +74,24 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="container mx-auto overflow-y-scroll h-[70vh] py-5">
+            <div className="grid grid-cols-4 gap-5">
+              {homeController.products.map((product, index) => {
+                return (
+                  <Product
+                    onClick={() => {
+                      // const find = orders.find((fd) => fd.item.id === item.id);
+                      // if (find) return;
+                      // setOrders([{ item, quantity: 1 }, ...orders]);
+                    }}
+                    key={index}
+                    product={product}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
