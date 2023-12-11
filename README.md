@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# React TypeScript E-Commerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pyde allows users to browse, and purchase products from our online store, with a coupon code functionality that gives a 40% discount on purchse. One of the key features is the persistence of cart items even after a page refresh.
 
-Currently, two official plugins are available:
+# Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Website](https://zarah-s.github.io/pyde/)
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React.js: Front-end library for building user interfaces
+- TypeScript: Typed superset of JavaScript
+- TailwindCSS: Styling the user interface
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Prerequisites
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Make sure you have the following installed on your machine:
+
+- Node.js: [Download Node.js](https://nodejs.org/)
+- npm: Included with Node.js, but you can also use yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/zarah-s/pyde
+   ```
+
+2. ```bash
+   cd pyde
+   ```
+
+3. ```bash
+   npm install
+   ```
+
+````
+
+4.  ``` bash
+npm run dev
+````
