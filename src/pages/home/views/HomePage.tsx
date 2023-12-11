@@ -5,10 +5,14 @@ import HomePageController from "../controller/HomePageController";
 import Product from "./components/Product";
 import { OrderProps } from "../../../interfaces/OrderProps";
 import Order from "./components/Order";
+import CheckoutModal from "./components/CheckoutModal";
+import { toast } from "react-toastify";
 
 const HomePage = () => {
   const [currentSubCategory, setCurrentSubCategory] = useState<number>(0);
   const [currentCategory, setCurrentCategory] = useState<number>(0);
+  const [showCcheckoutModal, setShowCheckoutModal] = useState<boolean>(false);
+
   const [orders, setOrders] = useState<OrderProps[]>([]);
   useEffect(() => {
     if (orders.length) {
@@ -25,6 +29,19 @@ const HomePage = () => {
   const homeController = HomePageController;
   return (
     <div>
+      <CheckoutModal
+        orders={orders}
+        open={showCcheckoutModal}
+        setConfirmModal={(value: boolean) => {
+          setShowCheckoutModal(value);
+        }}
+        onSubmit={() => {
+          setShowCheckoutModal(false);
+          setOrders([]);
+          localStorage.clear();
+          toast.success("Order successful");
+        }}
+      />
       <div className="grid grid-cols-12">
         <div className="col-span-1 border-r-[1px]  border-r-[#E4E4E4] h-full min-h-[calc(100vh-100px)]">
           <div className=" mt-5">
@@ -180,10 +197,12 @@ const HomePage = () => {
 
             <button
               disabled={!!!orders.length}
-              onClick={() => {}}
+              onClick={() => {
+                setShowCheckoutModal(true);
+              }}
               className="bg-[#14C8B0] w-full p-2 rounded-full text-white"
             >
-              Pay Now
+              Checkout
             </button>
           </div>
         </div>
