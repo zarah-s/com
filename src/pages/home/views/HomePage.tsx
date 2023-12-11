@@ -3,10 +3,14 @@ import Category from "./components/Category";
 import Tab from "./components/Tab";
 import HomePageController from "../controller/HomePageController";
 import Product from "./components/Product";
+import { OrderProps } from "../../../interfaces/OrderProps";
+import Order from "./components/Order";
 
 const HomePage = () => {
   const [currentSubCategory, setCurrentSubCategory] = useState<number>(0);
   const [currentCategory, setCurrentCategory] = useState<number>(0);
+  const [orders, setOrders] = useState<OrderProps[]>([]);
+
   const homeController = HomePageController;
   return (
     <div>
@@ -83,9 +87,11 @@ const HomePage = () => {
                 return (
                   <Product
                     onClick={() => {
-                      // const find = orders.find((fd) => fd.item.id === item.id);
-                      // if (find) return;
-                      // setOrders([{ item, quantity: 1 }, ...orders]);
+                      const find = orders.find(
+                        (fd) => fd.product.id === product.id
+                      );
+                      if (find) return;
+                      setOrders([{ product, quantity: 1 }, ...orders]);
                     }}
                     key={index}
                     product={product}
@@ -93,6 +99,81 @@ const HomePage = () => {
                 );
               })}
             </div>
+          </div>
+        </div>
+        <div className="col-span-3 border-l-[1px] border-l-[#E4E4E4] h-full min-h-[calc(100vh-100px)]">
+          <div className="p-5 overflow-y-auto h-[75vh]">
+            <div className="flex items-center justify-between">
+              <h2 className="text-[#19191C] font-[600] ">Orders details</h2>
+              <p>({orders.length}) items</p>
+            </div>
+            <div className="">
+              {orders.map((order, index) => {
+                return (
+                  <Order
+                    onAdd={() => {
+                      setOrders(
+                        orders.map((mp) => {
+                          if (mp.product.id === order.product.id) {
+                            return {
+                              product: mp.product,
+                              quantity: mp.quantity + 1,
+                            };
+                          }
+                          return mp;
+                        })
+                      );
+                    }}
+                    onDelete={() => {
+                      setOrders(
+                        orders.filter(
+                          (ft) => ft.product.id !== order.product.id
+                        )
+                      );
+                    }}
+                    onSubtract={() => {
+                      if (order.quantity === 1) return;
+
+                      setOrders(
+                        orders.map((mp) => {
+                          if (mp.product.id === order.product.id) {
+                            return {
+                              product: mp.product,
+                              quantity: mp.quantity - 1,
+                            };
+                          }
+                          return mp;
+                        })
+                      );
+                    }}
+                    order={order}
+                    key={index}
+                  />
+                );
+              })}
+            </div>
+          </div>
+          <div className="border-t-[1px] mt-2 border-t-[#E4E4E4] p-5">
+            <div className="flex items-center mb-5 justify-between">
+              <p className="text-[#828487] text-xs">Total</p>
+              <p className="text-[#19191C] text-xs font-[600]">
+                ₦{" "}
+                {orders.length
+                  ? orders
+                      .map((mp) => mp.product.price * mp.quantity)
+                      .reduce((a, b) => a + b)
+                      .toLocaleString()
+                  : 0}
+              </p>
+            </div>
+
+            <button
+              disabled={!!!orders.length}
+              onClick={() => {}}
+              className="bg-[#14C8B0] w-full p-2 rounded-full text-white"
+            >
+              Pay Now
+            </button>
           </div>
         </div>
       </div>
