@@ -107,70 +107,70 @@ class HomePageController {
             price: 100,
 
         },
-        // {
-        //     subcategory: "Home",
-        //     id: Math.floor(Math.random() * 9999).toString(),
-        //     image: "https://cdn.pixabay.com/photo/2011/03/01/03/55/iron-5112_640.jpg",
-        //     name: "Electric Iron",
-        //     price: 100,
+        {
+            subcategory: "Baked",
+            id: Math.floor(Math.random() * 9999).toString(),
+            image: "https://cdn.pixabay.com/photo/2017/05/07/08/56/pancakes-2291908_640.jpg",
+            name: "Pan Cake",
+            price: 100,
 
-        // },
-        // {
-        //     subcategory: "Home",
-        //     id: Math.floor(Math.random() * 9999).toString(),
-        //     image: "https://cdn.pixabay.com/photo/2011/03/01/03/55/iron-5112_640.jpg",
-        //     name: "Electric Iron",
-        //     price: 100,
+        },
+        {
+            subcategory: "Baked",
+            id: Math.floor(Math.random() * 9999).toString(),
+            image: "https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_640.jpg",
+            name: "Burger",
+            price: 100,
 
-        // },
-        // {
-        //     subcategory: "Home",
-        //     id: Math.floor(Math.random() * 9999).toString(),
-        //     image: "https://cdn.pixabay.com/photo/2011/03/01/03/55/iron-5112_640.jpg",
-        //     name: "Electric Iron",
-        //     price: 100,
+        },
+        {
+            subcategory: "Breakfast",
+            id: Math.floor(Math.random() * 9999).toString(),
+            image: "https://cdn.pixabay.com/photo/2015/07/12/14/26/coffee-842020_640.jpg",
+            name: "Tea",
+            price: 100,
 
-        // },
-        // {
-        //     subcategory: "Home",
-        //     id: Math.floor(Math.random() * 9999).toString(),
-        //     image: "https://cdn.pixabay.com/photo/2011/03/01/03/55/iron-5112_640.jpg",
-        //     name: "Electric Iron",
-        //     price: 100,
+        },
+        {
+            subcategory: "Breakfast",
+            id: Math.floor(Math.random() * 9999).toString(),
+            image: "https://cdn.pixabay.com/photo/2018/01/31/09/57/coffee-3120750_640.jpg",
+            name: "Coffee",
+            price: 100,
 
-        // },
-        // {
-        //     subcategory: "Home",
-        //     id: Math.floor(Math.random() * 9999).toString(),
-        //     image: "https://cdn.pixabay.com/photo/2011/03/01/03/55/iron-5112_640.jpg",
-        //     name: "Electric Iron",
-        //     price: 100,
+        },
+        {
+            subcategory: "Wears",
+            id: Math.floor(Math.random() * 9999).toString(),
+            image: "https://cdn.pixabay.com/photo/2017/06/20/21/33/couple-2424928_640.jpg",
+            name: "Couple Match",
+            price: 100,
 
-        // },
-        // {
-        //     subcategory: "Home",
-        //     id: Math.floor(Math.random() * 9999).toString(),
-        //     image: "https://cdn.pixabay.com/photo/2011/03/01/03/55/iron-5112_640.jpg",
-        //     name: "Electric Iron",
-        //     price: 100,
+        },
+        {
+            subcategory: "Wears",
+            id: Math.floor(Math.random() * 9999).toString(),
+            image: "https://cdn.pixabay.com/photo/2015/06/25/17/22/smart-watch-821559_640.jpg",
+            name: "Wrist watch",
+            price: 100,
 
-        // },
-        // {
-        //     subcategory: "Home",
-        //     id: Math.floor(Math.random() * 9999).toString(),
-        //     image: "https://cdn.pixabay.com/photo/2011/03/01/03/55/iron-5112_640.jpg",
-        //     name: "Electric Iron",
-        //     price: 100,
+        },
+        {
+            subcategory: "Wears",
+            id: Math.floor(Math.random() * 9999).toString(),
+            image: "https://cdn.pixabay.com/photo/2020/06/03/14/53/fashion-5255195_640.jpg",
+            name: "Indian",
+            price: 100,
 
-        // },
-        // {
-        //     subcategory: "Home",
-        //     id: Math.floor(Math.random() * 9999).toString(),
-        //     image: "https://cdn.pixabay.com/photo/2011/03/01/03/55/iron-5112_640.jpg",
-        //     name: "Electric Iron",
-        //     price: 100,
+        },
+        {
+            subcategory: "Wears",
+            id: Math.floor(Math.random() * 9999).toString(),
+            image: "https://cdn.pixabay.com/photo/2014/04/03/11/38/sunglasses-312051_640.png",
+            name: "Dark Shades",
+            price: 100,
 
-        // },
+        },
 
     ]
 
