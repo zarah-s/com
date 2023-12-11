@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Category from "./components/Category";
 import Tab from "./components/Tab";
 import HomePageController from "../controller/HomePageController";
@@ -10,6 +10,17 @@ const HomePage = () => {
   const [currentSubCategory, setCurrentSubCategory] = useState<number>(0);
   const [currentCategory, setCurrentCategory] = useState<number>(0);
   const [orders, setOrders] = useState<OrderProps[]>([]);
+  useEffect(() => {
+    if (orders.length) {
+      localStorage.setItem("orders", JSON.stringify(orders));
+    }
+  }, [orders]);
+
+  useEffect(() => {
+    const storedOrders = JSON.parse(localStorage.getItem("orders") || "[]");
+    console.log(storedOrders);
+    setOrders(storedOrders);
+  }, []);
 
   const homeController = HomePageController;
   return (
