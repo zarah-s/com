@@ -1,6 +1,6 @@
-# PYDE
+# COM
 
-Pyde allows users to browse, and purchase products from our online store, with a coupon code functionality that gives a 40% discount on purchse. One of the key features is the persistence of cart items even after a page refresh.
+COM allows users to browse, and purchase products from our online store, with a coupon code functionality that gives a 40% discount on purchse. One of the key features is the persistence of cart items even after a page refresh.
 
 # Preview
 
